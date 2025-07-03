@@ -3,7 +3,6 @@ import {
   Grid,
   OrbitControls,
   PerspectiveCamera,
-  Box,
   useGLTF,
 } from "@react-three/drei";
 import { useMemo, useRef } from "react";
@@ -290,7 +289,7 @@ const Scene = ({ config }: { config: AuroraConfig }) => {
 };
 
 const Aurora = ({ config }: { config: AuroraConfig }) => {
-  const { nodes, materials } = useGLTF("/aurora.glb");
+  const { nodes } = useGLTF("/aurora.glb");
   const materialRef = useRef<THREE.ShaderMaterial>(null);
 
   // Animate the shader material
@@ -505,7 +504,7 @@ const Aurora = ({ config }: { config: AuroraConfig }) => {
         }}
       />
     ),
-    []
+    [config]
   );
 
   return (
