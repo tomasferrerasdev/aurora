@@ -297,9 +297,9 @@ const Cloud = () => {
       side: THREE.BackSide,
       transparent: true,
     });
-  }, [texture, controls]);
+  }, [texture, controls, vertexShader, fragmentShader]);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (meshRef.current && material) {
       material.uniforms.cameraPos.value.copy(camera.position);
       material.uniforms.frame.value++;
