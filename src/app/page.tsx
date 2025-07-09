@@ -486,25 +486,25 @@ const Aurora = ({ config }: { config: AuroraConfig }) => {
         `}
         uniforms={{
           uTime: { value: 0.0 },
-          uScale: { value: config.noiseScale },
-          uNoiseStretch: { value: config.noiseStretch },
-          uNoiseSpeed: { value: config.noiseSpeed },
-          uVerticalGradientStrength: { value: config.verticalGradientStrength },
-          uRadialGradientStrength: { value: config.radialGradientStrength },
-          uGreenIntensity: { value: config.greenIntensity },
-          uBlueIntensity: { value: config.blueIntensity },
-          uPurpleIntensity: { value: config.purpleIntensity },
-          uColorMixSpeed1: { value: config.colorMixSpeed1 },
-          uColorMixSpeed2: { value: config.colorMixSpeed2 },
-          uColorMixFrequency1: { value: config.colorMixFrequency1 },
-          uColorMixFrequency2: { value: config.colorMixFrequency2 },
-          uAuroraThreshold: { value: config.auroraThreshold },
-          uAuroraBlur: { value: config.auroraBlur },
-          uOverallIntensity: { value: config.overallIntensity },
+          uScale: { value: 3.0 },
+          uNoiseStretch: { value: 0.05 },
+          uNoiseSpeed: { value: 0.5 },
+          uVerticalGradientStrength: { value: 1.0 },
+          uRadialGradientStrength: { value: 1.0 },
+          uGreenIntensity: { value: 0.8 },
+          uBlueIntensity: { value: 1.0 },
+          uPurpleIntensity: { value: 1.0 },
+          uColorMixSpeed1: { value: 0.3 },
+          uColorMixSpeed2: { value: 0.5 },
+          uColorMixFrequency1: { value: 3.0 },
+          uColorMixFrequency2: { value: 2.0 },
+          uAuroraThreshold: { value: 0.6 },
+          uAuroraBlur: { value: 0.3 },
+          uOverallIntensity: { value: 1.0 },
         }}
       />
     ),
-    [config]
+    []
   );
 
   return (
